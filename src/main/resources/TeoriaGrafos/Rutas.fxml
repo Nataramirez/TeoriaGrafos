@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="489.0" prefWidth="631.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TeoriaGrafos.viewcontroller.RutasViewController">
+   <children>
+      <Label layoutX="224.0" layoutY="14.0" text="Algoritmo de Dijkstra">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="27.0" layoutY="39.0" prefHeight="3.0" prefWidth="576.0" />
+      <TextArea fx:id="txtAreaResultado" layoutX="131.0" layoutY="245.0" prefHeight="217.0" prefWidth="365.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextArea>
+      <TitledPane animated="false" layoutX="45.0" layoutY="51.0" prefHeight="148.0" prefWidth="539.0" text="Ingrese lo datos">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="122.0" prefWidth="577.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="71.0" text="Escoja la ciudad o pueblo donde finaliza su ruta: ">
+                     <font>
+                        <Font name="System Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="17.0" text="Escoja la ciudad o pueblo donde inicia su ruta: ">
+                     <font>
+                        <Font name="System Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="ComboBoxIniciarRuta" layoutX="341.0" layoutY="14.0" prefHeight="25.0" prefWidth="183.0" />
+                  <ComboBox fx:id="ComboBoxFinalizaRuta" layoutX="341.0" layoutY="68.0" prefHeight="25.0" prefWidth="183.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <Button fx:id="btnCalcularRuta" layoutX="273.0" layoutY="211.0" mnemonicParsing="false" onAction="#onCalcularRuta" text="Calcular ruta" />
+   </children>
+</AnchorPane>
